@@ -1,4 +1,4 @@
-{ "backgroundcolor":"#64646464",
+{ "backgroundcolor":"#64000000",
  "height":15,
  "infinite":false,
  "layers":[
@@ -39,7 +39,7 @@
  "orientation":"orthogonal",
  "renderorder":"left-up",
  "templategroups":[],
- "tiledversion":"2017.10.11",
+ "tiledversion":"2017.10.31",
  "tileheight":16,
  "tilesets":[
         {
