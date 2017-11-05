@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -27,8 +28,8 @@ body {
 			this.load.spritesheet('tiles', 'assets/super_mario_tiles.png', 16,
 					16);
 			this.load.spritesheet('goomba', 'assets/goomba.png', 16, 16);
-			this.load.spritesheet('mario', 'assets/stand position.png', 16, 16);
-			this.load.spritesheet('coin', 'assets/SNES - Super Mario World - General Tiles.png', 16, 16);
+			this.load.spritesheet('mario', 'assets/mario.png', 16, 16);
+			this.load.spritesheet('coin', 'assets/coin.png', 16, 16);
 			this.load.tilemap('level', 'assets/super_mario_map.json', null,
 					Phaser.Tilemap.TILED_JSON);
 		}
@@ -64,8 +65,8 @@ body {
 			game.physics.arcade.enable(player);
 			player.body.gravity.y = 370;
 			player.body.collideWorldBounds = true;
-			player.animations.add('walk rigght', [ 1, 2, 3 ], 10, true);
-			player.animations.add('wlk left', [ 8, 9, 10 ], 10, true);
+			player.animations.add('walkRight', [ 1, 2, 3 ], 10, true);
+			player.animations.add('walkLeft', [ 8, 9, 10 ], 10, true);
 			player.goesRight = true;
 			game.camera.follow(player);
 			cursors = game.input.keyboard.createCursorKeys();
@@ -79,11 +80,11 @@ body {
 				player.body.velocity.x = 0;
 				if (cursors.left.isDown) {
 					player.body.velocity.x = -90;
-					player.animations.play('wlk left');
+					player.animations.play('walkLeft');
 					player.goesRight = false;
 				} else if (cursors.right.isDown) {
 					player.body.velocity.x = 90;
-					player.animations.play('walk rigght');
+					player.animations.play('walkRight');
 					player.goesRight = true;
 				} else {
 					player.animations.stop();
